@@ -7,7 +7,7 @@
     # Capture output from bash
     $result = bash ./TestBash.sh $Num1 $Num2
 
-    Write-Host $result
+    Write-Host "OutPut from Powershell" $result
 }
 
 # Function call
