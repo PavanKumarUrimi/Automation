@@ -5,7 +5,7 @@
     )
 
     # Capture output from bash
-    $result = bash ./sum.sh $Num1 $Num2
+    $result = bash ./TestBash.sh $Num1 $Num2
 
     Write-Host $result
 }
