@@ -1,0 +1,26 @@
+name: Run PowerShell with Pipeline Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      num1:
+        description: "First number"
+        required: true
+        default: "10"
+      num2:
+        description: "Second number"
+        required: true
+        default: "20"
+
+jobs:
+  run-sum:
+    runs-on: ubuntu-latest   # or windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run PowerShell script
+        shell: pwsh
+        run: |
+          ./Invokescript.ps1 -Num1 ${{ inputs.num1 }} -Num2 ${{ inputs.num2 }}
