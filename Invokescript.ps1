@@ -1,8 +1,13 @@
-﻿function Invoke-BashSum {
+﻿param (
+    [Parameter(Mandatory=$true)]
+    $Num1,
+    [Parameter(Mandatory=$true)]
+    $Num2
+)
+
+function Invoke-BashSum {
     param (
-        [Parameter(Mandatory = $true)]
         $Num1,
-        [Parameter(Mandatory = $true)]
         $Num2
     )
     try {
